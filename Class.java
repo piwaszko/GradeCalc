@@ -14,14 +14,11 @@ public class Class{
 	}
 
 	public void removeHW(double grade){
-	    int counter = 0;
-        for(Homeworks temp: _homeworks){
-            if(temp.returnGrade() == grade){
-                return;
+        for(int i=0; i<_homeworks.size(); ++i){
+            if(_homeworks.get(i).returnGrade() == grade){
+                _homeworks.remove(i);
             }
-            counter++;
         }
-		_homeworks.remove(counter);
 	}
 
 	public double calcHWAvg() {
