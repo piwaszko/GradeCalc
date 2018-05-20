@@ -9,12 +9,29 @@ public class Class{
 		_homeworks = new ArrayList<Homeworks>(); 
 	}
 
-	public void addHW(Double grade){
+	public void addHW(double grade){
 		_homeworks.add(new Homeworks(grade));
 	}
 
-	public void removeHW(int x){
-		_homeworks.remove(x);
+	public void removeHW(double grade){
+	    int counter = 0;
+        for(Homeworks temp: _homeworks){
+            if(temp.returnGrade() == grade){
+                return;
+            }
+            counter++;
+        }
+		_homeworks.remove(counter);
+	}
+
+	public double calcHWAvg() {
+		double sum = 0;
+		int counter = 0;
+		for(Homeworks temp: _homeworks){
+			sum += temp.returnGrade();
+			counter++;
+		}
+		return sum/counter;
 	}
 
 }

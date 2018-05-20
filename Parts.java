@@ -1,16 +1,16 @@
 public abstract class Parts{
 
-	private Double _grade;
+	private double _grade;
 
-	public Parts(Double grade){
+	public Parts(double grade){
 		_grade = grade;
 	}
 
-	public Double returnGrade(){
+	public double returnGrade(){
 		return _grade;
 	}
 
-	public void setGrade(Double grade){
+	public void setGrade(double grade){
 		_grade = grade; 
 	}
 }

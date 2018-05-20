@@ -1,6 +1,6 @@
 public class Homeworks extends Parts{
 
-	public Homeworks(Double grade){
+	public Homeworks(double grade){
 		super(grade);
 	}
 
