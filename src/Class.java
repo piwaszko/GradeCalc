@@ -1,4 +1,6 @@
-import java.util.ArrayList; 
+package src;
+
+import java.util.ArrayList;
 public class Class{
 
 	private String _className;

@@ -1,3 +1,5 @@
+package src;
+
 public abstract class Parts{
 
 	private double _grade;
