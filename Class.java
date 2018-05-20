@@ -13,8 +13,8 @@ public class Class{
 		_homeworks.add(new Homeworks(grade));
 	}
 
-	public void removesHW(){
-
+	public void removeHW(int x){
+		_homeworks.remove(x);
 	}
 
 }
