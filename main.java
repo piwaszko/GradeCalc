@@ -10,5 +10,4 @@ public class main{
 		double testAvg = test.calcHWAvg();
 		System.out.println(testAvg);
 	}
-
 }
