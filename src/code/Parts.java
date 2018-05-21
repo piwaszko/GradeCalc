@@ -1,4 +1,4 @@
-package src;
+package src.code;
 
 public abstract class Parts{
 
