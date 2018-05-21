@@ -1,4 +1,4 @@
-package src;
+package src.code;
 
 public class Homeworks extends Parts{
 
