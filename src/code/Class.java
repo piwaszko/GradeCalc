@@ -1,6 +1,7 @@
 package src.code;
 
 import java.util.ArrayList;
+
 public class Class{
 
 	private String _className;
@@ -15,7 +16,7 @@ public class Class{
 		_parts.add(new Parts(part, grade, weight));
 	}
 
-	public String getClassName(){
+	public String getName(){
 
 		return _className;
 

@@ -12,7 +12,7 @@ public class main{
 
 	for(Class theClass : list){
 
-		System.out.println(i + ". " + theClass.getClassName());
+		System.out.println(i + ". " + theClass.getName());
 
 		i++;
 
@@ -70,13 +70,32 @@ public class main{
 
 						if(Math.abs(classToModify) < classes.size()){
 
+							Class theClass = classes.get(classToModify);
+
+							System.out.println(theClass.getName());
+
 							System.out.println("\nWould you like to... ");
 
-							System.out.println("1. Delete this class");
-							System.out.println("2. Add a category to this class");
-							System.out.println("3. Print the current categorys");
+							System.out.println("0. Delete this class");
+							System.out.println("1. Add a category to this class");
+							System.out.println("2. Print the current categorys");
 
 							int modification = sc.nextInt();
+
+							switch(modification){
+
+								case 0:
+
+									classes.remove(classToModify);
+
+									break;
+
+								default:
+
+									System.out.println("Feature not available");
+
+									break;
+							}
 
 						}
 
@@ -100,7 +119,16 @@ public class main{
 
 					System.out.print("\n");
 
-					printList(classes);
+					if(!classes.isEmpty()){
+
+						printList(classes);
+					}
+
+					else{
+
+						System.out.println("You have no classes to print!");
+
+					}
 				
 					break;
 
