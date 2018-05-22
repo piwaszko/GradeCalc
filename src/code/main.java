@@ -12,7 +12,7 @@ public class main{
 
 		int option = 0;
 
-		ArrayList<Class> classes = new ArrayList<Class>(); 
+		ArrayList<Class> classes = new ArrayList<Class>();
 
 		while(option < 1){
 
@@ -36,17 +36,12 @@ public class main{
 
 					className = sc.next();
 
-					Class classToAdd = new Class(className);
+					classes.add(new Class(className));
 
 				case 1:
-
 					for(Class theClass : classes){
-
 						System.out.println(theClass.getClassName());
-
-
 					}
-					
 			}
 
 			System.out.print("\n");
