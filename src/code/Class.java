@@ -12,7 +12,9 @@ public class Class{
 	}
 
 	public void addHW(double grade){
+
 		_homeworks.add(new Homeworks(grade));
+
 	}
 
 	public void removeHW(double grade){
