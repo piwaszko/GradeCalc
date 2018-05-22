@@ -15,6 +15,12 @@ public class Class{
 		_parts.add(new Parts(part, grade, weight));
 	}
 
+	public String getClassName(){
+
+		return _className;
+
+	}
+
 /*	public void removeHW(double grade){
         for(int i=0; i<_homeworks.size(); ++i){
             if(_homeworks.get(i).returnGrade() == grade){
