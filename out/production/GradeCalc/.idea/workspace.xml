@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GradeCalc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GradeCalc/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Homeworks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Homeworks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/Parts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Parts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Model.java" afterDir="false" />
@@ -24,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/code/main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -50,8 +51,8 @@
       <file leaf-file-name="Homeworks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/code/Homeworks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -69,6 +70,7 @@
         <option value="$PROJECT_DIR$/src/code/Class.java" />
         <option value="$PROJECT_DIR$/src/code/Parts.java" />
         <option value="$PROJECT_DIR$/src/code/main.java" />
+        <option value="$PROJECT_DIR$/src/code/Homeworks.java" />
       </list>
     </option>
   </component>
@@ -82,8 +84,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2272" />
-    <option name="y" value="49" />
+    <option name="x" value="2347" />
+    <option name="y" value="92" />
     <option name="width" value="1400" />
     <option name="height" value="1080" />
   </component>
@@ -213,19 +215,19 @@
       <option name="presentableId" value="Default" />
       <updated>1526875754189</updated>
       <workItem from="1526875759496" duration="390000" />
-      <workItem from="1526961909298" duration="219000" />
+      <workItem from="1526961909298" duration="350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="609000" />
+    <option name="totallyTimeSpent" value="740000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2272" y="49" width="1400" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="2347" y="92" width="1400" height="1080" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -233,11 +235,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921347" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32886598" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -251,7 +253,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/code/Homeworks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -320,7 +321,7 @@
     <entry file="file://$PROJECT_DIR$/src/code/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>

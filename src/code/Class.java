@@ -15,6 +15,7 @@ public class Class{
 	public Class(String className){
 		_className = className; 
 		_parts = new ArrayList<Parts>();
+		_categories = new HashMap<String, Double>();
 	}
 
     /**
@@ -24,6 +25,7 @@ public class Class{
      * @return true if category does not exist
      */
 	public boolean addCategory (String partName, Double weight){
+
 	    if(_categories.containsKey(partName)){
 	        return false;
         }
@@ -39,8 +41,8 @@ public class Class{
 		return _className;
 	}
 
-	public Set<String> getCategories(){
-	    return _categories.keySet();
+	public HashMap<String, Double> getCategories(){
+	    return _categories;
     }
 
 /*	public void removeHW(double grade){
