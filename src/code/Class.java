@@ -4,18 +4,24 @@ import java.util.ArrayList;
 public class Class{
 
 	private String _className;
-	private ArrayList<Homeworks> _homeworks; 
+	private ArrayList<Parts> _parts;
 
 	public Class(String className){
 		_className = className; 
-		_homeworks = new ArrayList<Homeworks>(); 
+		_parts = new ArrayList<Parts>();
 	}
 
-	public void addHW(double grade){
-		_homeworks.add(new Homeworks(grade));
+	public void add(String part, double grade, double weight){
+		_parts.add(new Parts(part, grade, weight));
 	}
 
-	public void removeHW(double grade){
+	public String getClassName(){
+
+		return _className;
+
+	}
+
+/*	public void removeHW(double grade){
         for(int i=0; i<_homeworks.size(); ++i){
             if(_homeworks.get(i).returnGrade() == grade){
                 _homeworks.remove(i);
@@ -31,6 +37,6 @@ public class Class{
 			counter++;
 		}
 		return sum/counter;
-	}
+	}*/
 
 }
