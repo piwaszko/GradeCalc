@@ -86,49 +86,59 @@ public class main{
 
 							Class theClass = classes.get(classToModify);
 
-							System.out.println(theClass.getName());
+							int modification = -1;
 
-							System.out.println("\nWould you like to... ");
+							while(modification != 0){
 
-							System.out.println("0. Delete this class");
-							System.out.println("1. Add a category to this class");
-							System.out.println("2. Print the current categorys");
+								System.out.println("\nWould you like to... ");
 
-							int modification = sc.nextInt();
+								System.out.println("0. Main Menu");
+								System.out.println("1. Delete this class");
+								System.out.println("2. Add a category to this class");
+								System.out.println("3. Print the current categorys");
 
-							switch(modification){
+								modification = sc.nextInt();
 
-								case 0:
 
-									classes.remove(classToModify);
+								switch(modification){
 
-									break;
+									case 0:
+										break;
 
-                                case 1:
+									case 1:
 
-                                    System.out.println("\nPlease enter the name of the category. (i.e. \"Homework\")");
-                                    String categoryName = sc.next();
+										classes.remove(classToModify);
 
-                                    System.out.println("Please enter the weight this category holds on your grade. (i.e. 20.00)");
-                                    double categoryWeight = sc.nextDouble();
+										modification = 0;
 
-                                    classes.get(classToModify).addCategory(categoryName, categoryWeight);
+										break;
 
-                                    break;
+                                	case 2:
 
-                                case 2:
+                                    	System.out.println("\nPlease enter the name of the category. (i.e. \"Homework\")");
+                                    	String categoryName = sc.next();
 
-                                    HashMap<String, Double> categories = classes.get(classToModify).getCategories();
+                                    	System.out.println("Please enter the weight this category holds on your grade. (i.e. 20.00)");
+                                    	double categoryWeight = sc.nextDouble();
 
-                                    printMap(categories);
+                                    	classes.get(classToModify).addCategory(categoryName, categoryWeight);
+
+                                    	break;
+
+                                	case 3:
+
+                                    	HashMap<String, Double> categories = classes.get(classToModify).getCategories();
+
+                                    	printMap(categories);
                                         
-                                    break;
+                                    	break;
 
-								default:
+									default:
 
-									System.out.println("Feature not available");
+										System.out.println("Feature not available");
 
-									break;
+										break;
+								}
 							}
 
 						}
