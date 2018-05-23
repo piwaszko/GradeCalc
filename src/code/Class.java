@@ -11,11 +11,14 @@ public class Class{
 	private String _className;
 	private ArrayList<Parts> _parts;
 	private HashMap<String, Double> _categories;
+    private HashMap<String, Double> _averages;
 
-	public Class(String className){
+    public Class(String className){
 		_className = className; 
 		_parts = new ArrayList<Parts>();
 		_categories = new HashMap<String, Double>();
+        _averages = new HashMap<String, Double>();
+
 	}
 
     /**
@@ -37,6 +40,19 @@ public class Class{
 		_parts.add(new Parts(part, grade));
 	}
 
+	public void calculateAverages(){
+	    HashMap<String, Pair<Double, Integer>> store = new HashMap<String, Pair<Double, Integer>>();
+	    for(String temp : _categories.keySet()){
+            for(Parts tempPart: _parts){
+                if(store.containsKey(temp)){
+                    Pair<Double, Integer> pair = store.get(temp);
+                    store.put(temp, new Pair<Double, Integer>(pair.getKey()+tempPart.getGrade(), pair.getValue()+1));
+                }
+            }
+        }
+        
+    }
+
 	public String getName(){
 		return _className;
 	}
@@ -44,6 +60,11 @@ public class Class{
 	public HashMap<String, Double> getCategories(){
 	    return _categories;
     }
+
+    public HashMap<String, Double> getAverages(){
+        return _averages;
+    }
+
 
 /*	public void removeHW(double grade){
         for(int i=0; i<_homeworks.size(); ++i){
