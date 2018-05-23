@@ -2,6 +2,11 @@ package src.code;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import java.util.*;
+
 
 
 public class main{
@@ -18,6 +23,15 @@ public class main{
 
 		}
 
+	}
+
+	public static void printMap(Map mp) {
+    Iterator it = mp.entrySet().iterator();
+    while (it.hasNext()) {
+        Map.Entry pair = (Map.Entry)it.next();
+        System.out.println(pair.getKey() + " : " + pair.getValue() + "%");
+        it.remove(); // avoids a ConcurrentModificationException
+    	}
 	}
 
 	public static void main(String[] main){
@@ -93,16 +107,22 @@ public class main{
                                 case 1:
 
                                     System.out.println("\nPlease enter the name of the category. (i.e. \"Homework\")");
-                                    String temp = sc.nextLine();
+                                    String categoryName = sc.next();
+
                                     System.out.println("Please enter the weight this category holds on your grade. (i.e. 20.00)");
-                                    double wtemp = sc.nextDouble();
-                                    classes.get(classToModify).addCategory(temp, wtemp);
+                                    double categoryWeight = sc.nextDouble();
+
+                                    classes.get(classToModify).addCategory(categoryName, categoryWeight);
+
+                                    break;
 
                                 case 2:
 
-                                    for(String categories: classes.get(classToModify).getCategories()){
-                                        System.out.println(categories);
-                                    }
+                                    HashMap<String, Double> categories = classes.get(classToModify).getCategories();
+
+                                    printMap(categories);
+                                        
+                                    break;
 
 								default:
 
