@@ -90,6 +90,20 @@ public class main{
 
 									break;
 
+                                case 1:
+
+                                    System.out.println("\nPlease enter the name of the category. (i.e. \"Homework\")");
+                                    String temp = sc.nextLine();
+                                    System.out.println("Please enter the weight this category holds on your grade. (i.e. 20.00)");
+                                    double wtemp = sc.nextDouble();
+                                    classes.get(classToModify).addCategory(temp, wtemp);
+
+                                case 2:
+
+                                    for(String categories: classes.get(classToModify).getCategories()){
+                                        System.out.println(categories);
+                                    }
+
 								default:
 
 									System.out.println("Feature not available");

@@ -2,6 +2,8 @@ package src.code;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
+
 import javafx.util.Pair;
 
 public class Class{
@@ -19,7 +21,7 @@ public class Class{
      *
      * @param partName - Category name
      * @param weight   - The weight of the category
-     * @return true if category does not exist 
+     * @return true if category does not exist
      */
 	public boolean addCategory (String partName, Double weight){
 	    if(_categories.containsKey(partName)){
@@ -34,10 +36,12 @@ public class Class{
 	}
 
 	public String getName(){
-
 		return _className;
-
 	}
+
+	public Set<String> getCategories(){
+	    return _categories.keySet();
+    }
 
 /*	public void removeHW(double grade){
         for(int i=0; i<_homeworks.size(); ++i){
