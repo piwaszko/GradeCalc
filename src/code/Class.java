@@ -2,6 +2,8 @@ package src.code;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
 import java.util.Set;
 
 import javafx.util.Pair;
@@ -22,7 +24,6 @@ public class Class{
 	}
 
     /**
-     *
      * @param partName - Category name
      * @param weight   - The weight of the category
      * @return true if category does not exist
@@ -41,16 +42,26 @@ public class Class{
 	}
 
 	public void calculateAverages(){
-	    HashMap<String, Pair<Double, Integer>> store = new HashMap<String, Pair<Double, Integer>>();
+	    HashMap<String, Pair<Double, Double>> store = new HashMap<String, Pair<Double, Double>>();
 	    for(String temp : _categories.keySet()){
             for(Parts tempPart: _parts){
                 if(store.containsKey(temp)){
-                    Pair<Double, Integer> pair = store.get(temp);
-                    store.put(temp, new Pair<Double, Integer>(pair.getKey()+tempPart.getGrade(), pair.getValue()+1));
+                    Pair<Double, Double> pair = store.get(temp);
+                    store.put(temp, new Pair<Double, Double>(pair.getKey()+tempPart.getGrade(), pair.getValue()+1));
+                }else {
+                    Pair<Double, Double> pair = new Pair<Double, Double>(tempPart.getGrade(), 0.0);
+                    store.put(temp, pair);
                 }
             }
         }
-        
+        Iterator it = store.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Pair<Double, Double> avg = (Pair<Double, Double>) pair.getValue();
+            Double val = avg.getKey() / avg.getValue();
+            _averages.put((String) pair.getKey(), val);
+            it.remove(); // avoids a ConcurrentModificationException
+        }
     }
 
 	public String getName(){
