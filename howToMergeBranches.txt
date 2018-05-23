@@ -1,0 +1,5 @@
+$ git checkout new_branch
+$ git merge -m 'merge message' -s ours origin/old_branch
+$ git checkout old_branch
+$ git merge new_branch
+$ git push origin old_branch
