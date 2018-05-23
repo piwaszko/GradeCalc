@@ -64,6 +64,15 @@ public class Class{
         }
     }
 
+    public boolean deleteCategory(String catName, Double weight){
+        if(_categories.containsKey(catName)){
+            _categories.remove(catName);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 	public String getName(){
 		return _className;
 	}
