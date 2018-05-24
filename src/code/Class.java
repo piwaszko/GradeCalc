@@ -33,7 +33,9 @@ public class Class{
 	    if(_categories.containsKey(partName)){
 	        return false;
         }
+
         _categories.put(partName,weight);
+
 	    return true;
     }
 
@@ -41,7 +43,7 @@ public class Class{
 		_parts.add(new Parts(part, grade));
 	}
 
-	public void calculateAverages(){
+/*	public void calculateAverages(){
 	    HashMap<String, Pair<Double, Double>> store = new HashMap<String, Pair<Double, Double>>();
 	    for(String temp : _categories.keySet()){
             for(Parts tempPart: _parts){
@@ -63,7 +65,7 @@ public class Class{
             it.remove(); // avoids a ConcurrentModificationException
         }
     }
-
+*/
     public boolean deleteCategory(String catName, Double weight){
         if(_categories.containsKey(catName)){
             _categories.remove(catName);
@@ -79,6 +81,11 @@ public class Class{
 
 	public HashMap<String, Double> getCategories(){
 	    return _categories;
+    }
+
+    public int getCategorieSize(){
+    	return _categories.size();
+
     }
 
     public HashMap<String, Double> getAverages(){

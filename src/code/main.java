@@ -4,10 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-
-import java.util.*;
-
-
+import java.util.Map;
 
 public class main{
 
@@ -30,7 +27,7 @@ public class main{
     while (it.hasNext()) {
         Map.Entry pair = (Map.Entry)it.next();
         System.out.println(pair.getKey() + " : " + pair.getValue() + "%");
-        it.remove(); // avoids a ConcurrentModificationException
+        //it.remove();  avoids a ConcurrentModificationException
     	}
 	}
 
@@ -84,8 +81,6 @@ public class main{
 
 						if(Math.abs(classToModify) < classes.size()){
 
-							Class theClass = classes.get(classToModify);
-
 							int modification = -1;
 
 							while(modification != 0){
@@ -95,14 +90,15 @@ public class main{
 								System.out.println("0. Main Menu");
 								System.out.println("1. Delete this class");
 								System.out.println("2. Add a category to this class");
-								System.out.println("3. Print the current categorys");
+								System.out.println("3. Modify a category");
+								System.out.println("4. Print the current categories");
 
 								modification = sc.nextInt();
-
 
 								switch(modification){
 
 									case 0:
+									
 										break;
 
 									case 1:
@@ -127,9 +123,33 @@ public class main{
 
                                 	case 3:
 
-                                    	HashMap<String, Double> categories = classes.get(classToModify).getCategories();
+                                		if(classes.get(classToModify).getCategorieSize() != 0){
 
-                                    	printMap(categories);
+                                    		printMap(classes.get(classToModify).getCategories());
+
+
+                                    	}
+
+                                    	else{
+
+                                    		System.out.println("You have no categories to modify!");
+
+                                    	}
+                                        
+                                    	break;
+
+                                    case 4:
+
+                                		if(classes.get(classToModify).getCategorieSize() != 0){
+
+                                    		printMap(classes.get(classToModify).getCategories());
+                                    	}
+
+                                    	else{
+
+                                    		System.out.println("You have no categories to print!");
+
+                                    	}
                                         
                                     	break;
 
