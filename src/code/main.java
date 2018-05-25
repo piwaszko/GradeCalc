@@ -31,6 +31,17 @@ public class main{
     	}
 	}
 
+	public static void printCategoryMap(Map mp) {
+    Iterator it = mp.entrySet().iterator();
+    int counter = 0;
+    while (it.hasNext()) {
+        Map.Entry pair = (Map.Entry)it.next();
+        System.out.println(counter + ". " + pair.getKey() + " : " + pair.getValue() + "%");
+        ++counter;
+        //it.remove();  avoids a ConcurrentModificationException
+    	}
+	}
+
 	public static void main(String[] main){
 		
 		Scanner sc = new Scanner(System.in);
@@ -81,9 +92,9 @@ public class main{
 
 						if(Math.abs(classToModify) < classes.size()){
 
-							int modification = -1;
+							int classModification = -1;
 
-							while(modification != 0){
+							while(classModification != 0){
 
 								System.out.println("\nWould you like to... ");
 
@@ -93,9 +104,9 @@ public class main{
 								System.out.println("3. Modify a category");
 								System.out.println("4. Print the current categories");
 
-								modification = sc.nextInt();
+								classModification = sc.nextInt();
 
-								switch(modification){
+								switch(classModification){
 
 									case 0:
 									
@@ -105,7 +116,7 @@ public class main{
 
 										classes.remove(classToModify);
 
-										modification = 0;
+										classModification = 0;
 
 										break;
 
@@ -125,8 +136,41 @@ public class main{
 
                                 		if(classes.get(classToModify).getCategorieSize() != 0){
 
-                                    		printMap(classes.get(classToModify).getCategories());
+                                    		System.out.println("\nSelect a catgeory you would like to modify...");
 
+                                    		printCategoryMap(classes.get(classToModify).getCategories());
+
+                                    		int categoryToModify = sc.nextInt();
+
+                                    		int categoryModification = -1;
+                                    		
+                                    		while(categoryModification != 0){
+
+                                    			System.out.println("\nWould you like to...");
+
+                                    			System.out.println("0. Go back to class modification.");
+
+                                    			System.out.println("1. Delete this category.");
+
+                                    			categoryModification = sc.nextInt();
+
+                                    			switch(categoryModification){
+
+                                    				case 0:
+
+                                    					break;
+
+                                    				case 1:
+
+                                    				//delete the category
+
+                                    				default:
+
+                                    					System.out.println("Select a valid option!");
+
+                                    			}
+
+                                    		}
 
                                     	}
 
@@ -155,7 +199,7 @@ public class main{
 
 									default:
 
-										System.out.println("Feature not available");
+										System.out.println("Select a valid option!");
 
 										break;
 								}
