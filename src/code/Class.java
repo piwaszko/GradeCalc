@@ -75,6 +75,16 @@ public class Class{
         }
     }
 
+    public boolean modifyCategory(String pastName, String newName, Double newWeight){
+        if(_categories.containsKey(pastName)){
+            _categories.remove(pastName);
+            _categories.put(newName, newWeight);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 	public String getName(){
 		return _className;
 	}
