@@ -20,7 +20,6 @@ public class Class{
 		_parts = new ArrayList<Parts>();
 		_categories = new HashMap<String, Double>();
         _averages = new HashMap<String, Double>();
-
 	}
 
     /**

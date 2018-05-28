@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class main{
+public class Main{
 
 	public static void printList(ArrayList<Class> list){
 
