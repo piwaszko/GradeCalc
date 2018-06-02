@@ -136,11 +136,18 @@ public class Main{
 
                                 		if(classes.get(classToModify).getCategorieSize() != 0){
 
-                                    		System.out.println("\nSelect a catgeory you would like to modify...");
+                                    		System.out.println("\nPlease type the category you would like to modify...");
 
-                                    		printCategoryMap(classes.get(classToModify).getCategories());
+                                    		printMap(classes.get(classToModify).getCategories());
 
-                                    		int categoryToModify = sc.nextInt();
+                                    		String categoryToModify = sc.next();
+
+                                    		while(!classes.get(classToModify).categoryExists(categoryToModify)){
+
+                                    			System.out.println("\nPlease enter a valid category...");
+
+                                    			categoryToModify = sc.next();
+                                    		}
 
                                     		int categoryModification = -1;
                                     		
@@ -162,7 +169,9 @@ public class Main{
 
                                     				case 1:
 
-                                    				//delete the category
+                                    					classes.get(classToModify).deleteCategory(categoryToModify);
+
+                                    					categoryModification = 0;
 
                                     				default:
 

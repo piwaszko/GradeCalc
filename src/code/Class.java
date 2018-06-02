@@ -65,7 +65,7 @@ public class Class{
         }
     }
 */
-    public boolean deleteCategory(String catName, Double weight){
+    public boolean deleteCategory(String catName){
         if(_categories.containsKey(catName)){
             _categories.remove(catName);
             return true;
@@ -82,6 +82,15 @@ public class Class{
         }else {
             return false;
         }
+    }
+
+    public boolean categoryExists(String catName){
+    	if(_categories.containsKey(catName)){
+    		return true;
+    	}
+    	else{
+    		return false;
+    	}
     }
 
 	public String getName(){
