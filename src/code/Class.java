@@ -39,7 +39,9 @@ public class Class{
     }
 
 	public void add(String part, double grade){
-		_parts.add(new Parts(part, grade));
+	    Parts temp;
+        temp = new Parts(part, grade);
+        _parts.add(null);
 	}
 
 /*	public void calculateAverages(){
